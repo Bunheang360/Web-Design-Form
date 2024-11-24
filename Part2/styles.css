@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 15px 25px;
+    border-radius: 8px;
+}
+
+.container .tittle {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.container form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+.user-details .input-box details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+    border-color: #9b59b6;
+}
+
+form .gender-details .gender-tittle {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+form .gender-details .catagories {
+    display: flex;
+    width: 80%;
+    margin: 5px 0;
+    justify-content: space-between;
+}
+
+.gender-details .catagories label {
+    display: flex;
+    align-items: center;
+}
+
+.gender-details .catagories .dot  {
+    height: 18px;
+    width: 18px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 5px;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#dot-1:checked ~ .catagories label .one,
+#dot-2:checked ~ .catagories label .two,
+#dot-3:checked ~ .catagories label .three {
+    border-color: #d9d9d9;
+    background: #9b59b6;
+}
+
+form input[type = "radio"] {
+    display: none;
+}
+
+form .hobbies-details,
+form .income,
+form .income-details,
+form .profile-details,
+form .age-details,
+form .bios-details {
+    margin-bottom: 10px;
+}
+
+form .hobbies-details .hobbies-tittle {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form .hobbies-details .y1 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+form .income input[type="range"] {
+    width: 80%;
+}
+
+form .profile-details {
+    padding: 10px 0;
+}
+
+form .age-details input[type="number"] {
+    width: 100%;
+    height: 45px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+} 
+
+form .bios-details textarea {
+    width: 100%;
+    height: 100px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+form.hobbies-details label {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+form .button {
+    height: 45px;
+    margin: 45px 0;
+}
+
+form .button input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+form .button input:hover {
+    background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+    cursor: pointer;
+}
+
+@media(max-width: 584px) {
+    .container {
+      max-width: 100%;
+    }
+    form .user-details .input-box {
+      margin-bottom: 15px;
+      width: 100%;
+    }
+    form .category {
+      width: 100%;
+    }
+    .content form .user-details {
+      max-height: 300px;
+      overflow-y: scroll;
+    }
+    .user-details::-webkit-scrollbar {
+      width: 5px;
+    }
+  }
+
+@media(max-width: 459px) {
+    .container .content .category {
+      flex-direction: column;
+    }
+}

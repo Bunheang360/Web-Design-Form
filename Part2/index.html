@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tittle">Create Your Account</div>
+        <form action="#">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">First Name*</span>
+                    <input type="text" placeholder="Enter your first name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Last Name*</span>
+                    <input type="text" placeholder="Enter your last name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Email*</span>
+                    <input type="text" placeholder="Enter your email" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Phone Number*</span>
+                    <input type="text" placeholder="Enter your phone number" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Password*</span>
+                    <input type="text" placeholder="Enter your password" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Confirm Password*</span>
+                    <input type="text" placeholder="Enter your password again" required>
+                </div>
+            </div>
+            <div class="gender-details">
+                <input type="radio" name= "gender" id="dot-1">
+                <input type="radio" name= "gender" id="dot-2">
+                <input type="radio" name= "gender" id="dot-3">
+                <span class="gender-tittle">Gender</span>  
+                <div class="catagories">
+                    <label for="dot-1">
+                        <span class="dot one"></span>
+                        <span class="gender">Male</span>
+                    </label>
+                    <label for="dot-2">
+                        <span class="dot two"></span>
+                        <span class="gender">Female</span>
+                    </label>
+                    <label for="dot-3">
+                        <span class="dot three"></span>
+                        <span class="gender">Prefer not to say</span>
+                    </label>
+                </div>
+            </div>
+            <div class="hobbies-details">
+                <label class="y1">Hobbies</label>
+                <div class="hobbies-tittle">
+                    <div>
+                        <input type="checkbox" id="music" name="hobbies" value="music">
+                        <label for="music">Music</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="sports" name="hobbies" value="sports">
+                        <label for="sports">Sports</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="travel" name="hobbies" value="travel">
+                        <label for="travel">Travel</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="movies" name="hobbies" value="movies">
+                        <label for="movies">Movies</label>
+                    </div>  
+                </div>
+            </div>
+            <div class="income-details">
+                <label for="source-of-income">Source of Income</label>
+                <select id="source-of-income">
+                  <option value="employed">Employed</option>
+                  <option value="self-employed">Self-Employed</option>
+                  <option value="student">Student</option>
+                  <option value="retired">Retired</option>
+                </select>
+            </div>
+            <div class="income">
+                <label for="income">Income</label>
+                <input type="range" id="income" min="0" max="20000" value="2000" class="income-slider" oninput="this.nextElementSibling.value = this.value">
+                <output>2000</output>
+            </div>
+            <div class="profile-details">
+                <label for="profile-picture">Upload profile picture</label>
+                <input type="file" id="profile-picture" class="profile-picture-input">
+            </div>
+            <div class="age-details">
+                <label for="age">Age : </label>
+                <input type="number" id="age" min="18" max="99" value="18">
+            </div>
+            <div class="bios-details">
+                <label for="bio">Bio : </label>
+                <textarea id="bio" rows="3" placeholder="Enter your bio"></textarea>
+            </div>
+            <div class="button">
+                <input type="submit" value="Create"> 
+            </div>
+        </form>
+    </div>
+</body>
+</html>
